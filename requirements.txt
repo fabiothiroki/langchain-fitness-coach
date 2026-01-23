@@ -32,3 +32,6 @@ urllib3==2.6.3
 uuid_utils==0.14.0
 xxhash==3.6.0
 zstandard==0.25.0
+gradio==6.4.0
+langchain-community==0.4.1
+sqlalchemy==2.0.46
