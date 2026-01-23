@@ -140,7 +140,7 @@ Known profile:
 Missing fields: {missing_fields}
 
 Rules:
-- If any fields are missing, ask ONE concise question for the next missing field and wait for the reply.
+- If any fields are missing, ask ONE concise question for all missing fields and wait for the reply.
 - Once all fields are known, provide today's workout: a short title, bullet list with sets/reps/time, then a fuller rationale paragraph that explicitly references the profile details and prior chat context. Keep it concise and encouraging.
 """
     return ChatPromptTemplate.from_messages([
