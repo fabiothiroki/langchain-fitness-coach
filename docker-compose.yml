@@ -5,6 +5,10 @@ services:
       - "7860:7860"
     volumes:
       - ./coach.db:/app/coach.db
+      - ./data:/app/data
     environment:
       - GRADIO_SERVER_NAME=0.0.0.0
       - GRADIO_SERVER_PORT=7860
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

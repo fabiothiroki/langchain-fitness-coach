@@ -21,8 +21,9 @@ from langchain_ollama import ChatOllama
 
 # Single-user session id to keep the demo simple.
 SESSION_ID = "demo_user"
-DB_PATH = os.path.join(os.path.dirname(__file__), "coach.db")
-
+DB_FOLDER = "data"
+DB_NAME = "coach.db"
+DB_PATH = os.path.join(DB_FOLDER, DB_NAME)
 
 def init_db(path: str = DB_PATH) -> sqlite3.Connection:
     """Create the profiles table if missing and return a shared connection."""
@@ -158,7 +159,11 @@ def get_message_history(session_id: str) -> SQLChatMessageHistory:
 
 
 prompt = build_prompt()
-model = ChatOllama(model="llama3.2", temperature=0.6)
+model = ChatOllama(
+    model="llama3.2",
+    temperature=0.6,
+    base_url=os.getenv("OLLAMA_HOST", "http://localhost:11434")
+)
 chain = prompt | model | StrOutputParser()
 chain_with_history = RunnableWithMessageHistory(
     chain,
