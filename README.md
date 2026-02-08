@@ -10,6 +10,10 @@ A streaming fitness coach chatbot powered by LangChain and Ollama. The app learn
 - **Single-user demo** - Simplified setup with fixed session management
 - **Containerized** - Easy deployment with Docker
 
+## Demo
+
+![Fitness Coach Demo](demo.gif)
+
 ## Prerequisites
 
 - [Docker](https://www.docker.com/products/docker-desktop)
