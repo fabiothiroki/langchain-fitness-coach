@@ -144,7 +144,9 @@ Rules:
 - If any fields are missing, ask ONE concise question for all missing fields and wait for the reply.
 - Once all fields are known, provide today's workout: a short title, bullet list with sets/reps/time, 
 then a fuller rationale paragraph that explicitly references the profile details and prior chat context. 
-Keep it concise and encouraging.
+
+Tone:
+Concise and encouraging.
 """
     return ChatPromptTemplate.from_messages([
         ("system", system.strip()),
@@ -218,4 +220,6 @@ def build_interface() -> gr.Blocks:
 
 if __name__ == "__main__":
     app = build_interface()
+    print("\n🚀 Fitness Coach is starting...")
+    print("📍 App will be accessible at http://localhost:7860\n")
     app.launch()
