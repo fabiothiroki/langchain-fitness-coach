@@ -2,6 +2,8 @@
 
 A streaming fitness coach chatbot powered by LangChain and Ollama. The app learns your fitness profile and generates personalized daily workouts with detailed rationales.
 
+📖 **[Read the full tutorial on Medium](https://medium.com/gitconnected/build-an-ai-agent-with-long-term-memory-266fe5b7bcc1)**
+
 ## Features
 
 - **Streaming responses** - Real-time workout generation
